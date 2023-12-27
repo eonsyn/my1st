@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(219, 186, 192);
+}
+
+h1 {
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-40%);
+    color: rgb(82, 68, 68);
+    font-size: 80px;
+    z-index: 2;
+}
+
+.heading-section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.heading {
+    position: relative;
+    height: 100%;
+}
+
+#back-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: opacity(1);
+}
+
+.char-img {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(10px, 10px);
+    transform: scale(1);
+    padding-right: 80%;
+}
+
+#demo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+}
+
+button {
+    margin: 0 10px; /* Adjust the margin as needed */
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(221, 176, 211);
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Make the canvas not capture mouse events */
+}
+
+@media only screen and (max-width: 620px) {
+    .char-img {
+        top: 80%;
+        left: -34vh; /* Adjust the left value as needed */
+        transform: translate(0, -50%);
+        padding-right: 0;
+        text-align: left;
+    }
+
+    h1 {
+        color: rgb(222, 215, 90);
+    }
+
+    #back-img {
+        height: 100%;
+        width: auto;
+    }
+}
